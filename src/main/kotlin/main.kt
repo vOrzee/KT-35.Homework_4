@@ -8,8 +8,7 @@ fun main() { //Вместо рублей в качестве значений и
     println("Комиссия составит ${transferCommission(400_00, "Mastercard", 75_000_00)} копеек")
 }
 
-fun transferCommission(amount: Int, typeAccount: String = "VK Pay", sumAmountsLetter: Int = 0) =
-    when (typeAccount) {
+fun transferCommission(amount: Int, typeAccount: String = "VK Pay", sumAmountsLetter: Int = 0) = when (typeAccount) {
         "VK Pay" -> 0
         "Visa", "Мир" ->
             if (amount * COMMISSION_PERCENTAGE_VISA_MIR > COMMISSION_MIN_TAX_VISA_MIR)
