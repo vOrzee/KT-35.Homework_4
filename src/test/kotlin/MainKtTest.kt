@@ -47,11 +47,12 @@ class MainKtTest {
 
     @Test
     fun transferCommissionMaestroLimitExceeded() {
-        val amount = 30_000_00
+        val amount = 3_000_00
         val typeAccount = "Maestro"
-        val sumAmountsLetter = 580_000_00
+        val sumAmountsLetter = 100_000_00
         try {
             transferCommission(amount, typeAccount, sumAmountsLetter)
+            assertTrue(false)
         } catch (e: Exception) {
             assertEquals(e.message, Exception("Превышены лимиты по этой карте").message)
         }
@@ -64,6 +65,7 @@ class MainKtTest {
         val sumAmountsLetter = 20_000_00
         try {
             transferCommission(amount, typeAccount, sumAmountsLetter)
+            assertTrue(false)
         } catch (e: Exception) {
             assertEquals(e.message, Exception("Платёжная система не зарегистрирована").message)
         }
