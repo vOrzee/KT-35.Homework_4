@@ -20,7 +20,6 @@ fun main() { //Вместо рублей в качестве значений и
         Но для упрощения будем считать максимальную сумму перевода
         по карте не за сутки, а за одну операцию
      */
-    println("Комиссия составит ${transferCommission(400_00, "Mastercard", 75_000_00)} копеек")
 }
 
 fun transferCommission(amount: Int, typeAccount: String = "VK Pay", sumAmountsLetter: Int = 0) = when (typeAccount) {
