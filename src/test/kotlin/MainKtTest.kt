@@ -28,6 +28,7 @@ class MainKtTest {
         val sumAmountsLetter = 20_000_00
         try {
             transferCommission(amount, typeAccount, sumAmountsLetter)
+            assertTrue(false)
         } catch (e: Exception) {
             assertEquals(e.message, Exception("Превышены лимиты по данной платёжной системе").message)
         }
@@ -40,6 +41,7 @@ class MainKtTest {
         val sumAmountsLetter = 580_000_00
         try {
             transferCommission(amount, typeAccount, sumAmountsLetter)
+            assertTrue(false)
         } catch (e: Exception) {
             assertEquals(e.message, Exception("Превышены лимиты по этой карте").message)
         }
