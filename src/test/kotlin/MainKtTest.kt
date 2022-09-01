@@ -30,7 +30,7 @@ class MainKtTest {
             transferCommission(amount, typeAccount, sumAmountsLetter)
             assertTrue(false)
         } catch (e: Exception) {
-            assertEquals(e.message, Exception("Превышены лимиты по данной платёжной системе").message)
+            assertEquals("Превышены лимиты по данной платёжной системе", e.message)
         }
     }
 
@@ -43,7 +43,7 @@ class MainKtTest {
             transferCommission(amount, typeAccount, sumAmountsLetter)
             assertTrue(false)
         } catch (e: Exception) {
-            assertEquals(e.message, Exception("Превышены лимиты по этой карте").message)
+            assertEquals("Превышены лимиты по этой карте", e.message)
         }
     }
 
@@ -56,7 +56,7 @@ class MainKtTest {
             transferCommission(amount, typeAccount, sumAmountsLetter)
             assertTrue(false)
         } catch (e: Exception) {
-            assertEquals(e.message, Exception("Превышены лимиты по этой карте").message)
+            assertEquals("Превышены лимиты по этой карте", e.message)
         }
     }
 
@@ -69,7 +69,7 @@ class MainKtTest {
             transferCommission(amount, typeAccount, sumAmountsLetter)
             assertTrue(false)
         } catch (e: Exception) {
-            assertEquals(e.message, Exception("Платёжная система не зарегистрирована").message)
+            assertEquals("Платёжная система не зарегистрирована", e.message)
         }
     }
 
