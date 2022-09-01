@@ -47,9 +47,9 @@ class MainKtTest {
 
     @Test
     fun transferCommissionMaestroLimitExceeded() {
-        val amount = 3_000_00
+        val amount = 63_000_00
         val typeAccount = "Maestro"
-        val sumAmountsLetter = 100_000_00
+        val sumAmountsLetter = 540_000_00
         try {
             transferCommission(amount, typeAccount, sumAmountsLetter)
             assertTrue(false)
